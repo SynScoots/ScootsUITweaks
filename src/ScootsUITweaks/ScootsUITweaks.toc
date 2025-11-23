@@ -1,0 +1,13 @@
+## Interface: 30300
+## X-Compatible-With: 40000
+## Title: Scoots UI Tweaks
+## Notes: A collection of tweaks to the UI
+## Author: Scoots
+## Version: 1.0.0
+## OptionalDeps: TomTom
+## SavedVariables: SCOOTS_UI_TWEAKS
+
+ScootsUITweaks.lua
+ScootsUITweaks-DungeonFinder.lua
+ScootsUITweaks-Map.lua
+ScootsUITweaks-Tooltips.lua
