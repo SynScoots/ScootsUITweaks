@@ -1,4 +1,4 @@
-ScootsUITweaks <span style="color: #98fb98">1.0.0</span>.
+ScootsUITweaks <span style="color: #98fb98">1.0.1</span>.
 
 ## Description ##
 

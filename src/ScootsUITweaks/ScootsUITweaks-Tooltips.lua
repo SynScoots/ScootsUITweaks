@@ -59,7 +59,6 @@ ScootsUITweaks_tooltip_init = function()
                             local r, g, b
                             
                             if(progress == 0) then
-                                self:AddLine('zero')
                                 r, g, b = zero[1], zero[2], zero[3]
                             else
                                 r = low[1] + ((full[1] - low[1]) * (progress / 100))

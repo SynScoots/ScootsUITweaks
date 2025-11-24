@@ -3,7 +3,7 @@
 ## Title: Scoots UI Tweaks
 ## Notes: A collection of tweaks to the UI
 ## Author: Scoots
-## Version: 1.0.0
+## Version: 1.0.1
 ## OptionalDeps: TomTom
 ## SavedVariables: SCOOTS_UI_TWEAKS
 
