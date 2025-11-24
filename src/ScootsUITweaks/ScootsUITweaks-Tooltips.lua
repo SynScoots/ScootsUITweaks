@@ -40,35 +40,38 @@ ScootsUITweaks_tooltip_init = function()
                             local blueQuestion = '|TInterface\\GossipFrame\\DailyActiveQuestIcon:16:16|t'
                             local blueExclaim = '|TInterface\\GossipFrame\\DailyQuestIcon:16:16|t'
                             
-                            local attunedLevel = GetItemAttuneForge(itemId)
-                            local itemForgeLevel = GetItemLinkTitanforge(itemLink)
-                            
-                            if(attunedLevel < 0) then
-                                icon = goldQuestion
-                            elseif(attunedLevel < itemForgeLevel) then
-                                icon = blueExclaim
-                            else
-                                icon = blueQuestion
-                            end
-                            
                             local progress = GetItemLinkAttuneProgress(itemLink)
-                            local zero = {1.00, 0.40, 0.40}
-                            local low =  {0.85, 0.85, 0.40}
-                            local full = {0.40, 0.90, 0.40}
                             
-                            local r, g, b
-                            
-                            if(progress == 0) then
-                                r, g, b = zero[1], zero[2], zero[3]
-                            else
-                                r = low[1] + ((full[1] - low[1]) * (progress / 100))
-                                g = low[2] + ((full[2] - low[2]) * (progress / 100))
-                                b = low[3] + ((full[3] - low[3]) * (progress / 100))
+                            if(progress < 100) then
+                                local attunedLevel = GetItemAttuneForge(itemId)
+                                local itemForgeLevel = GetItemLinkTitanforge(itemLink)
                                 
-                                progress = string.format('%.2f', math.floor((progress * 100) + 0.5) / 100)
+                                if(attunedLevel < 0) then
+                                    icon = goldQuestion
+                                elseif(attunedLevel < itemForgeLevel) then
+                                    icon = blueExclaim
+                                else
+                                    icon = blueQuestion
+                                end
+                                
+                                local zero = {1.00, 0.40, 0.40}
+                                local low =  {0.85, 0.85, 0.40}
+                                local full = {0.40, 0.90, 0.40}
+                                
+                                local r, g, b
+                                
+                                if(progress == 0) then
+                                    r, g, b = zero[1], zero[2], zero[3]
+                                else
+                                    r = low[1] + ((full[1] - low[1]) * (progress / 100))
+                                    g = low[2] + ((full[2] - low[2]) * (progress / 100))
+                                    b = low[3] + ((full[3] - low[3]) * (progress / 100))
+                                    
+                                    progress = string.format('%.2f', math.floor((progress * 100) + 0.5) / 100)
+                                end
+                                
+                                self:AddDoubleLine(icon .. ' Attuned XP', progress .. '%', 0.6, 0.6, 1, r, g, b)
                             end
-                            
-                            self:AddDoubleLine(icon .. ' Attuned XP', progress .. '%', 0.6, 0.6, 1, r, g, b)
                         end
                     end
                 end
