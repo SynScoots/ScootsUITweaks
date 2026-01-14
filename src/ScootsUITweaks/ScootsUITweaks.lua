@@ -1,5 +1,5 @@
 ScootsUITweaks = {
-    ['version'] = '1.0.2',
+    ['version'] = '1.1.0',
     ['frames'] = {
         ['events'] = CreateFrame('Frame', 'ScootsUITweaks-EventFrame', UIParent),
     },

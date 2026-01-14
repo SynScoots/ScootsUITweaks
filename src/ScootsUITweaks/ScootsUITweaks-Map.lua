@@ -72,8 +72,5 @@ if(IsAddOnLoaded('TomTom')) then
         ScootsUITweaks.frames.events:RegisterEvent('WORLD_MAP_UPDATE')
     end
 
-    --SynastriaSafeInvoke('ScootsUITweaks_map_init')
-    ScootsUITweaks_map_init()
-    
-    -- Directly calling ScootsUITweaks_map_init here works, but is technically introducing a race condition.
+    SynastriaSafeInvoke('ScootsUITweaks_map_init')
 end
