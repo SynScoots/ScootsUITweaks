@@ -1,4 +1,4 @@
-ScootsUITweaks <span style="color: #98fb98">1.1.0</span>.
+ScootsUITweaks <span style="color: #98fb98">1.2.0</span>.
 
 ## Description ##
 
@@ -7,8 +7,10 @@ This is a collection of small tweaks the user interface.
 Features:
 - Dungeon finder will remember which type you had selected between reloads / relogs.
 - Dungeon finder will display dungeon challenge levels in the "specific dungeons" list.
-- For prestiged players with an attune mastery greater than 0%, item tooltips for non-soulbound attuneable items of the "wrong type" will display their attunement progress.
 - For users with the TomTom addon installed, a button to automatically convert pins added via the world map tracking panel to waypoints is added to the tracking panel.
+- Displays a race/class combination on all the attuneable starting grey items.
+- For prestiged players with an attune mastery greater than 0%, item tooltips for non-soulbound attuneable items of the "wrong type" will display their attunement progress.
+- For prestiged players, alt-clicking on an item on the item tracker will automatically call the `.coerceitem` command for that item.
 
 ## Installation ##
 
